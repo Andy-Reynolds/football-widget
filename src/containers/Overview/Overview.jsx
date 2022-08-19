@@ -1,8 +1,6 @@
 import "./Overview.scss";
 
 const Overview = ({ matchData }) => {
-  console.log(matchData.match.contestant[0].name);
-
   return (
     <div className="overview">
       <h3 className="overview__league">
