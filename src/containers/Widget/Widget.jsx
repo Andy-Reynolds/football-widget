@@ -2,10 +2,10 @@ import Overview from "../Overview/Overview";
 import StatsContainer from "../StatsContainer/StatsContainer";
 import "./Widget.scss";
 
-const Widget = () => {
+const Widget = ({ matchData }) => {
   return (
     <div className="widget">
-      <Overview />
+      <Overview matchData={matchData} />
       <StatsContainer />
     </div>
   );
