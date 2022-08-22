@@ -1,8 +1,6 @@
 .overview {
-  border: 2px solid red;
   padding: 1rem;
   padding-top: 0rem;
-  background-color: rgb(0, 0, 0, 0.1);
 
   &__league {
     font-size: 1rem;
@@ -22,6 +20,15 @@
     justify-content: space-around;
   }
 
+  &__team {
+    display: flex;
+  }
+
+  &__badge {
+    width: 25px;
+    margin-right: 0.5rem;
+  }
+
   &__team-name {
     font-size: 1.2rem;
     margin: 0;
@@ -38,8 +45,8 @@
   }
 
   &__scores {
-    background-color: white;
-    border-radius: 0.2rem;
+    background-color: #ebecf5;
+    border-radius: 0.3rem;
     width: 1.5rem;
     display: flex;
     flex-direction: column;

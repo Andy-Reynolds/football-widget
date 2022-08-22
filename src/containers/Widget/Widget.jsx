@@ -6,7 +6,7 @@ const Widget = ({ matchData }) => {
   return (
     <div className="widget">
       <Overview matchData={matchData} />
-      <StatsContainer />
+      <StatsContainer matchData={matchData} />
     </div>
   );
 };

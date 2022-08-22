@@ -1,0 +1,30 @@
+.tab-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ebecf5;
+  }
+
+  &__tab {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    background-color: #ebecf5;
+    border: none;
+
+    &--active {
+      background-color: #14202c;
+      color: white;
+      font-weight: bold;
+    }
+  }
+
+  &__heading {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+}
