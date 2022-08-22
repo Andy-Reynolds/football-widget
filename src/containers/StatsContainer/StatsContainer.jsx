@@ -40,6 +40,7 @@ const StatsContainer = ({ matchData }) => {
         <>
           <MatchPeriodSelector
             handleMatchPeriodClick={handleMatchPeriodClick}
+            matchPeriod={matchPeriod}
           />
           <StatBarsContainer matchData={matchData} matchPeriod={matchPeriod} />
         </>

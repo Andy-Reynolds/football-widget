@@ -1,23 +1,28 @@
 // import { useState } from "react";
+import Tab from "../Tab/Tab";
 import "./TabSelector.scss";
 
 const TabSelector = ({ matchData, handleTabClick, tab }) => {
-  // const [tab, setTab] = useState("General");
-
   const homeTeam = matchData.match.contestant[0].code;
   const awayTeam = matchData.match.contestant[1].code;
 
-  // const handleTabClick = (event) => {
-  //   const selectedTab = event.target.innerHTML;
-  //   setTab(selectedTab);
-  // };
+  const tabsArr = ["Overview", "General", homeTeam, awayTeam, "Player"];
+  console.log(tabsArr);
 
-  // console.log(tab);
+  const tabsJSX = tabsArr.map((tabItem) => (
+    <Tab
+      key={tabItem}
+      tabName={tabItem}
+      active={tabItem === tab}
+      onClick={handleTabClick}
+    />
+  ));
 
   return (
     <div className="tab-selector">
       <div className="tab-selector__container">
-        <button className="tab-selector__tab" onClick={handleTabClick}>
+        {tabsJSX}
+        {/* <button className="tab-selector__tab" onClick={handleTabClick}>
           Overview
         </button>
         <button
@@ -34,7 +39,7 @@ const TabSelector = ({ matchData, handleTabClick, tab }) => {
         </button>
         <button className="tab-selector__tab" onClick={handleTabClick}>
           Player
-        </button>
+        </button> */}
       </div>
       <h4 className="tab-selector__heading">{tab}</h4>
     </div>
