@@ -1,0 +1,46 @@
+.stat-bar {
+  // border: 2px solid red;
+
+  &__info-container {
+    // border: 2px solid blue;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.3rem;
+  }
+
+  &__info {
+    margin: 0rem;
+  }
+
+  &__bars-container {
+    // border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+  }
+
+  &__background {
+    // border: 2px solid red;
+    width: 48%;
+    background-color: #14202c;
+    height: 0.5rem;
+    border-radius: 100rem;
+  }
+
+  &__meter {
+    width: 48%;
+    background-color: white;
+    height: 0.5rem;
+    border-radius: 100rem;
+
+    &--home {
+      background-color: #efe52e;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    &--away {
+      background-color: #44db5e;
+    }
+  }
+}

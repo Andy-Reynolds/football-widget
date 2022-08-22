@@ -1,9 +1,9 @@
 .match-period-selector {
-  border: 2px solid red;
   display: flex;
   justify-content: space-between;
   width: 270px;
   margin: auto;
+  margin-bottom: 1rem;
 
   &__button {
     padding: 0.5rem 1rem;

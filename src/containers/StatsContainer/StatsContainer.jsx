@@ -3,6 +3,8 @@ import "./StatsContainer.scss";
 import { useState } from "react";
 import MatchPeriodSelector from "../../components/MatchPeriodSelector/MatchPeriodSelector";
 import DataNotFound from "../../components/DataNotFound/DataNotFound";
+import StatBarsContainer from "../StatBarsContainer/StatBarsContainer";
+import StatBar from "../../components/StatBar/StatBar";
 
 const StatsContainer = ({ matchData }) => {
   const [tab, setTab] = useState("General");
@@ -36,7 +38,12 @@ const StatsContainer = ({ matchData }) => {
         tab={tab}
       />
       {isGeneral ? (
-        <MatchPeriodSelector handleMatchPeriodClick={handleMatchPeriodClick} />
+        <>
+          <MatchPeriodSelector
+            handleMatchPeriodClick={handleMatchPeriodClick}
+          />
+          <StatBarsContainer />
+        </>
       ) : (
         <DataNotFound />
       )}
