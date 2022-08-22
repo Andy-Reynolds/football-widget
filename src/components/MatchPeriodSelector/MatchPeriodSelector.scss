@@ -1,0 +1,20 @@
+.match-period-selector {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  margin: auto;
+
+  &__button {
+    padding: 0.5rem 1rem;
+    background-color: #ebecf5;
+    border: none;
+    border-radius: 100rem;
+
+    &--active {
+      background-color: #14202c;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
