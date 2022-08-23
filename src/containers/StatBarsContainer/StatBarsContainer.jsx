@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Cards from "../../components/Cards/Cards";
 import StatBar from "../../components/StatBar/StatBar";
 import "./StatBarsContainer.scss";
 
@@ -8,8 +9,8 @@ const StatBarsContainer = ({ matchData, matchPeriod }) => {
   const homeStats = matchData.match.liveData.lineups.home.stats;
   const awayStats = matchData.match.liveData.lineups.away.stats;
 
-  console.log(homeStats);
-  console.log(awayStats);
+  console.log(matchData.match.liveData.lineups.home);
+  console.log(matchData.match.liveData.lineups.away);
 
   useEffect(() => {
     if (matchPeriod === "Full Match") {
@@ -25,8 +26,8 @@ const StatBarsContainer = ({ matchData, matchPeriod }) => {
     <div className="stat-bars-container">
       <StatBar
         type={"Possession"}
-        homeStat={homeStats[3][key]}
-        awayStat={awayStats[1][key]}
+        homeStat={homeStats[3][key] + "%"}
+        awayStat={awayStats[1][key] + "%"}
       />
       <StatBar
         type={"Shots"}
@@ -43,6 +44,9 @@ const StatBarsContainer = ({ matchData, matchPeriod }) => {
         homeStat={homeStats[2][key]}
         awayStat={awayStats[4][key]}
       />
+      <div className="stat-bars-container__cards-container">
+        <Cards homeStat={homeStats[4][key]} awayStat={awayStats[0][key]} />
+      </div>
     </div>
   );
 };

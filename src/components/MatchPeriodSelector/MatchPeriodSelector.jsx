@@ -1,5 +1,4 @@
 import MatchPeriod from "../MatchPeriod/MatchPeriod";
-// import Tab from "../Tab/Tab";
 import "./MatchPeriodSelector.scss";
 
 const MatchPeriodSelector = ({ handleMatchPeriodClick, matchPeriod }) => {
@@ -14,29 +13,7 @@ const MatchPeriodSelector = ({ handleMatchPeriodClick, matchPeriod }) => {
     />
   ));
 
-  return (
-    <div className="match-period-selector">
-      {matchPeriodJSX}
-      {/* <button
-        className="match-period-selector__button match-period-selector__button--active"
-        onClick={handleMatchPeriodClick}
-      >
-        Full Match
-      </button>
-      <button
-        className="match-period-selector__button"
-        onClick={handleMatchPeriodClick}
-      >
-        1st Half
-      </button>
-      <button
-        className="match-period-selector__button"
-        onClick={handleMatchPeriodClick}
-      >
-        2nd Half
-      </button> */}
-    </div>
-  );
+  return <div className="match-period-selector">{matchPeriodJSX}</div>;
 };
 
 export default MatchPeriodSelector;

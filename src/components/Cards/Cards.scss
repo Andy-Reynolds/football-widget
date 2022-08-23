@@ -1,0 +1,39 @@
+.cards {
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    display: flex;
+    align-items: center;
+
+    &--away {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__card-colour {
+    height: 1rem;
+    width: 0.8rem;
+    margin: 0.4rem;
+    border-radius: 0.2rem;
+
+    &--yellow {
+      background-color: #efe52e;
+    }
+
+    &--red {
+      background-color: #e72035;
+    }
+  }
+
+  &__card-number {
+    margin: 0rem;
+
+    &--home {
+      margin-right: 0.5rem;
+    }
+    &--away {
+      margin-left: 0.5rem;
+    }
+  }
+}
