@@ -25,10 +25,6 @@ const StatsContainer = ({ matchData }) => {
     setMatchPeriod(selectedTab);
   };
 
-  console.log(tab);
-  console.log(matchPeriod);
-  console.log(isGeneral);
-
   return (
     <div className="stats-container">
       <TabSelector

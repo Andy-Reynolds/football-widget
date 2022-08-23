@@ -9,9 +9,6 @@ const StatBarsContainer = ({ matchData, matchPeriod }) => {
   const homeStats = matchData.match.liveData.lineups.home.stats;
   const awayStats = matchData.match.liveData.lineups.away.stats;
 
-  console.log(matchData.match.liveData.lineups.home);
-  console.log(matchData.match.liveData.lineups.away);
-
   useEffect(() => {
     if (matchPeriod === "Full Match") {
       setKey("value");
@@ -26,8 +23,8 @@ const StatBarsContainer = ({ matchData, matchPeriod }) => {
     <div className="stat-bars-container">
       <StatBar
         type={"Possession"}
-        homeStat={homeStats[3][key] + "%"}
-        awayStat={awayStats[1][key] + "%"}
+        homeStat={homeStats[3][key]}
+        awayStat={awayStats[1][key]}
       />
       <StatBar
         type={"Shots"}

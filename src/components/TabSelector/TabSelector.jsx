@@ -6,7 +6,6 @@ const TabSelector = ({ matchData, handleTabClick, tab }) => {
   const awayTeam = matchData.match.contestant[1].code;
 
   const tabsArr = ["Overview", "General", homeTeam, awayTeam, "Player"];
-  console.log(tabsArr);
 
   const tabsJSX = tabsArr.map((tabItem) => (
     <Tab
