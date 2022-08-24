@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.scss";
 import Widget from "./containers/Widget/Widget";
-import mockData from "./assets/mockData/data";
 
 function App() {
-  const [matchData, setMatchData] = useState(mockData);
+  const [matchData, setMatchData] = useState();
+  const [isLoading, setIsLoading] = useState(true);
 
   const url =
     "https://odds-api.dev.checkd-dev.com/dev/smartacca/fixtures/7guiizddobmjb28yptfeghcoa/preview";
@@ -13,6 +13,7 @@ function App() {
     const res = await fetch(url);
     const data = await res.json();
     setMatchData(data);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -21,7 +22,7 @@ function App() {
 
   return (
     <div className="App">
-      <Widget matchData={matchData} />
+      {isLoading ? <h1>Loading...</h1> : <Widget matchData={matchData} />}
     </div>
   );
 }
